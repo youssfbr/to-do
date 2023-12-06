@@ -11,7 +11,7 @@ public record TodoResponseDTO(
         String description,
         LocalDateTime createdAt,
         LocalDate deadline,
-        LocalDate finesheadAt
+        LocalDate fineshedAt
 ) {
     public TodoResponseDTO(Todo todo) {
         this(
@@ -20,7 +20,7 @@ public record TodoResponseDTO(
                 todo.getDescription(),
                 todo.getCreatedAt(),
                 todo.getDeadline(),
-                todo.getFinesheadAt()
+                todo.getFineshedAt()
         );
     }
 }

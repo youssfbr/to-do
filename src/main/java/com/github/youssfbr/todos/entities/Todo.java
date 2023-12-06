@@ -34,7 +34,7 @@ public class Todo {
     @Column(nullable = false)
     private LocalDate deadline;
 
-    private LocalDate finesheadAt;
+    private LocalDate fineshedAt;
 
     @PrePersist
     void prePersist() {

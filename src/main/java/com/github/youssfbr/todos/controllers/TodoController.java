@@ -21,22 +21,3 @@ public class TodoController {
                 Map.of("todos", todoService.findAllTodos()));
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
