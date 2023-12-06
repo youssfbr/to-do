@@ -1,6 +1,7 @@
 package com.github.youssfbr.todos.services.impl;
 
 import com.github.youssfbr.todos.dtos.TodoResponseDTO;
+import com.github.youssfbr.todos.entities.Todo;
 import com.github.youssfbr.todos.repositories.ITodoRepository;
 import com.github.youssfbr.todos.services.ITodoService;
 import lombok.RequiredArgsConstructor;
@@ -22,5 +23,11 @@ public class TodoService implements ITodoService {
                 .stream()
                 .map(TodoResponseDTO::new)
                 .toList();
+    }
+
+    @Override
+    @Transactional
+    public void createTodo(Todo todo) {
+        todoRepository.save(todo);
     }
 }
